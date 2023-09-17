@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">BIA test app</string>
+    <string name="resend_code_timer">Выслать повторный код (00:%s)</string>
+    <string name="resend_code">Выслать повторный код</string>
+    <string name="tasks">Задания</string>
+    <string name="timetable">Графики</string>
+    <string name="chat">Чат</string>
+    <string name="profile">Профиль</string>
+    <string name="download">Скачать</string>
+    <string name="next">Продолжить</string>
+    <string name="submit">Принять</string>
+    <string name="decline">Отказаться</string>
+    <string name="cargo_type">Тип груза</string>
+    <string name="city_details">Город исполнения</string>
+    <string name="date_details">Дата заказа</string>
+    <string name="time_details">Время прибытия</string>
+    <string name="start_point_details">Начальная точка маршрута</string>
+    <string name="end_point_details">Конечная точка маршрута</string>
+    <string name="body_type_details">Тип кузова</string>
+    <string name="order_details">Детали заказа</string>
+    <string name="pay_order_details">Параметры по оплате</string>
+    <string name="contact_details">Контакты</string>
+    <string name="client_rules">Правила клиента</string>
+    <string name="incident">Инцидент</string>
+    <string name="error">Ошибка</string>
+    <string name="attach_documents">Прикрепить документы</string>
+    <string name="end_task">Завершить заказ</string>
+    <string name="decline_task">Отказаться от задания</string>
+    <string name="tip_text">Для завершения заказа необходимо прикрепить документы</string>
+</resources>
