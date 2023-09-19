@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -8,35 +9,65 @@
         android:id="@+id/incident_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:clickable="true"
         android:background="@drawable/task_details_container"
         app:layout_constraintTop_toTopOf="parent">
-        
+
+        <FrameLayout
+            android:id="@+id/badge_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/badge_container"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/badge_text"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/stolzl_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
+
         <TextView
             style="@style/DetailsBottomTextView"
+            android:id="@+id/incident_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/incident"
-            app:layout_constraintStart_toStartOf="parent"
+            android:clickable="false"
+            android:duplicateParentState="true"
+            android:layout_marginStart="8dp"
+            app:layout_goneMarginStart="0dp"
+            android:layout_gravity="start|center_vertical"
+            app:layout_constraintStart_toEndOf="@id/badge_container"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/incident_button"
+        <androidx.appcompat.widget.AppCompatImageView
             style="@style/TaskImageButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
+            android:clickable="false"
+            android:layout_gravity="end|center_vertical"
+            android:duplicateParentState="true"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <FrameLayout
         android:id="@+id/error_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:clickable="true"
         android:background="@drawable/task_details_container"
         android:layout_marginTop="12dp"
         app:layout_constraintTop_toBottomOf="@id/incident_container">
@@ -46,26 +77,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/error"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            android:clickable="false"
+            android:duplicateParentState="true"
+            android:layout_gravity="start|center_vertical" />
 
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/error_button"
+        <androidx.appcompat.widget.AppCompatImageView
             style="@style/TaskImageButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            android:clickable="false"
+            android:duplicateParentState="true"
+            android:layout_gravity="end|center_vertical" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <FrameLayout
         android:id="@+id/documents_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:clickable="false"
         android:background="@drawable/task_details_container"
         android:layout_marginTop="12dp"
         app:layout_constraintTop_toBottomOf="@id/error_container">
@@ -75,26 +105,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/attach_documents"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            android:clickable="false"
+            android:duplicateParentState="true"
+            android:layout_gravity="start|center_vertical"/>
 
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/documents_button"
+        <androidx.appcompat.widget.AppCompatImageView
             style="@style/TaskImageButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            android:clickable="false"
+            android:duplicateParentState="true"
+            android:layout_gravity="end|center_vertical"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         style="@style/TaskDeclineButton"
         android:id="@+id/end_task_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:enabled="false"
         android:text="@string/end_task"
         app:layout_constraintTop_toBottomOf="@id/documents_container"/>
 

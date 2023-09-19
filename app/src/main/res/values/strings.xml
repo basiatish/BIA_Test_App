@@ -3,6 +3,7 @@
     <string name="resend_code_timer">Выслать повторный код (00:%s)</string>
     <string name="resend_code">Выслать повторный код</string>
     <string name="tasks">Задания</string>
+    <string name="task_details">Детали задания</string>
     <string name="timetable">Графики</string>
     <string name="chat">Чат</string>
     <string name="profile">Профиль</string>
@@ -24,7 +25,23 @@
     <string name="incident">Инцидент</string>
     <string name="error">Ошибка</string>
     <string name="attach_documents">Прикрепить документы</string>
+    <string name="documents">Документы</string>
     <string name="end_task">Завершить заказ</string>
     <string name="decline_task">Отказаться от задания</string>
     <string name="tip_text">Для завершения заказа необходимо прикрепить документы</string>
+    <string name="task_status">Текущее задание</string>
+    <string name="show_details">Посмотреть детали</string>
+    <string name="task_done">Работа выполнена</string>
+    <string name="task_done_success">Задание было успешно выполнено</string>
+    <string name="choose_what_happened">Выберите что произошло</string>
+    <string name="address_problem">Проблема на адресе</string>
+    <string name="problem_on_the_way">Проблема в пути</string>
+    <string name="load_problem">Проблема на загрузке</string>
+    <string name="save">Сохранить</string>
+    <string name="for_end_task">Для завершения заказа необходимо прикрепить документы</string>
+    <string name="add_photo">Добавить фото</string>
+    <string name="task_decline">Работа отклонена</string>
+    <string name="task_decline_details">Задание было отклонено</string>
+    <string name="rules_toast">Правила загружены в downloads</string>
+    <string name="documents_toast">Документы загружены</string>
 </resources>

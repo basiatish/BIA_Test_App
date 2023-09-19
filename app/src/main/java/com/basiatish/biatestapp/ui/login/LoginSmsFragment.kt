@@ -47,9 +47,6 @@ class LoginSmsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.backBtn.setOnClickListener {
-            NavigationUI.navigateUp(findNavController(), null)
-        }
         val codeTextWatcher = CodeTextWatcher(binding.input, binding.confirmButton)
         binding.input.addTextChangedListener(codeTextWatcher)
         binding.input.requestFocus()
@@ -80,6 +77,9 @@ class LoginSmsFragment : Fragment() {
                 return@setOnEditorActionListener true
             }
             return@setOnEditorActionListener false
+        }
+        binding.backBtn.setOnClickListener {
+            NavigationUI.navigateUp(findNavController(), null)
         }
     }
 

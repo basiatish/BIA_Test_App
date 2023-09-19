@@ -4,10 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_gray_blue"
     tools:context=".ui.MainActivity">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/top_bar"
+        style="@style/TopBarStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent">
@@ -18,11 +20,13 @@
             android:layout_height="wrap_content"
             android:text="@string/tasks"
             android:textSize="22sp"
-            android:padding="16dp"
             android:textColor="@color/dark"
-            android:fontFamily="@font/stolzl_regular" />
+            android:fontFamily="@font/stolzl_regular"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/main_fragment_container"
@@ -40,6 +44,8 @@
         android:id="@+id/nav_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:itemTextAppearanceInactive="@style/MenuInactiveTextStyle"
+        app:itemTextAppearanceActive="@style/MenuActiveTextStyle"
         app:itemActiveIndicatorStyle="@style/BottomViewActiveIndicator"
         app:labelVisibilityMode="labeled"
         android:layout_alignParentBottom="true"

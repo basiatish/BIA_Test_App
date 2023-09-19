@@ -3,12 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:padding="16dp">
+    android:paddingHorizontal="16dp">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/tasks_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/task_item"/>
+        android:paddingBottom="16dp"
+        android:clipToPadding="false"
+        android:paddingTop="8dp"
+        tools:listitem="@layout/task_list_item"/>
 
 </RelativeLayout>

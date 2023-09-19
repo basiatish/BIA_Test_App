@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "347629643157",
+    "firebase_url": "https://biatestapp-default-rtdb.firebaseio.com",
+    "project_id": "biatestapp",
+    "storage_bucket": "biatestapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:347629643157:android:b46052809433393cab429c",
+        "android_client_info": {
+          "package_name": "com.basiatish.biatestapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhSpMBWdxbgW2YGgJuQ7cpK7fl4d0wHRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

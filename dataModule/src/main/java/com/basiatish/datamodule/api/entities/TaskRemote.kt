@@ -3,6 +3,8 @@ package com.basiatish.datamodule.api.entities
 import com.google.gson.annotations.SerializedName
 
 data class TaskRemote(
+    @SerializedName("id") val id: Int,
+    @SerializedName("status") val status: String,
     @SerializedName("cargo_type") val cargoType: String,
     @SerializedName("city") val city: String,
     @SerializedName("date") val date: String,

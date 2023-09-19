@@ -3,11 +3,55 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph_main"
-    app:startDestination="@id/tasksFragment">
+    app:startDestination="@id/tasksListFragment">
 
     <fragment
-        android:id="@+id/tasksFragment"
+        android:id="@+id/tasksListFragment"
         android:name="com.basiatish.biatestapp.ui.tasks.TasksListFragment"
         android:label="TasksFragment"
-        tools:layout="@layout/tasks_list_fragment"/>
+        tools:layout="@layout/tasks_list_fragment">
+        <action
+            android:id="@+id/action_tasksFragment_to_taskDetailsFragment"
+            app:destination="@id/taskDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskDetailsFragment"
+        android:name="com.basiatish.biatestapp.ui.tasks.TaskDetailsFragment"
+        android:label="TaskDetailsFragment"
+        tools:layout="@layout/task_details_fragment">
+        <argument
+            android:name="taskId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_taskDetailsFragment_to_incidentFragment"
+            app:destination="@id/incidentFragment" />
+        <action
+            android:id="@+id/action_taskDetailsFragment_to_taskDocumentsFragment"
+            app:destination="@id/taskDocumentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/incidentFragment"
+        android:name="com.basiatish.biatestapp.ui.tasks.IncidentFragment"
+        android:label="IncidentFragment"
+        tools:layout="@layout/incident_fragment">
+        <argument
+            android:name="taskID"
+            app:argType="integer" />
+        <argument
+            android:name="incidentText"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskDocumentsFragment"
+        android:name="com.basiatish.biatestapp.ui.tasks.TaskDocumentsFragment"
+        android:label="TaskDocumentsFragment"
+        tools:layout="@layout/documents_fragment">
+        <argument
+            android:name="taskID"
+            app:argType="integer" />
+        <argument
+            android:name="contactName"
+            app:argType="string" />
+    </fragment>
 </navigation>

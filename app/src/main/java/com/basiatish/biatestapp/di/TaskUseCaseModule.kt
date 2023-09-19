@@ -2,7 +2,10 @@ package com.basiatish.biatestapp.di
 
 import com.basiatish.datamodule.repositories.TaskRepositoryImpl
 import com.basiatish.domain.usecases.GetRemoteTasksUseCase
+import com.basiatish.domain.usecases.GetTaskIncidentUseCase
 import com.basiatish.domain.usecases.GetTaskUseCase
+import com.basiatish.domain.usecases.UpdateTaskStatusUseCase
+import com.basiatish.domain.usecases.UploadTaskIncidentUseCase
 import dagger.Module
 import dagger.Provides
 
@@ -19,4 +22,18 @@ class TaskUseCaseModule {
         return GetTaskUseCase(taskRepository)
     }
 
+    @Provides
+    fun provideUploadTaskIncidentUseCase(taskRepository: TaskRepositoryImpl): UploadTaskIncidentUseCase {
+        return UploadTaskIncidentUseCase(taskRepository)
+    }
+
+    @Provides
+    fun provideGetTaskIncidentUseCase(taskRepository: TaskRepositoryImpl): GetTaskIncidentUseCase {
+        return GetTaskIncidentUseCase(taskRepository)
+    }
+
+    @Provides
+    fun provideUpdateTaskStatusUseCase(taskRepository: TaskRepositoryImpl): UpdateTaskStatusUseCase {
+        return UpdateTaskStatusUseCase(taskRepository)
+    }
 }

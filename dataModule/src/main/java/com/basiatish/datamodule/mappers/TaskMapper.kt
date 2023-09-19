@@ -1,13 +1,17 @@
 package com.basiatish.datamodule.mappers
 
 import com.basiatish.datamodule.api.entities.TaskRemote
+import com.basiatish.datamodule.api.entities.TaskStatusRemote
 import com.basiatish.domain.entities.Task
 import com.basiatish.domain.entities.TaskList
+import com.basiatish.domain.entities.TaskStatus
 
 class TaskMapper {
 
     fun toTask(taskRemote: TaskRemote): Task {
         return Task(
+            id = taskRemote.id,
+            status = taskRemote.status,
             cargoType = taskRemote.cargoType,
             city = taskRemote.city,
             date = taskRemote.date,
@@ -22,33 +26,31 @@ class TaskMapper {
         )
     }
 
-    fun toListTask(taskListRemote: List<TaskRemote>): List<Task> {
+    fun toTaskList(taskListRemote: List<TaskRemote>): List<TaskList> {
         return taskListRemote.map { item ->
-            Task(
+            TaskList(
+                id = item.id,
+                status = item.status,
                 cargoType = item.cargoType,
-                city = item.city,
                 date = item.date,
                 time = item.time,
                 startPoint = item.startPoint,
                 endPoint = item.endPoint,
-                bodyType = item.bodyType,
-                orderDetails = item.orderDetails,
-                payDetails = item.payDetails,
-                phone = item.phone,
-                name = item.name
-            )
-        }
-    }
-
-    fun toTaskList(taskListRemote: List<TaskRemote>): List<TaskList> {
-        return taskListRemote.map { item ->
-            TaskList(
-                cargoType = item.cargoType,
-                date = item.date,
-                time = item.time,
                 orderDetails = item.orderDetails,
                 payDetails = item.payDetails
             )
         }
+    }
+
+    fun toTaskStatusRemote(status: String): TaskStatusRemote {
+        return TaskStatusRemote(
+            status = status
+        )
+    }
+
+    fun toTaskStatus(taskStatusRemote: TaskStatusRemote): TaskStatus {
+        return TaskStatus(
+            status = taskStatusRemote.status
+        )
     }
 }

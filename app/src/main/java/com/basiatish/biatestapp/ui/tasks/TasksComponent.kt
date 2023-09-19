@@ -1,8 +1,11 @@
 package com.basiatish.biatestapp.ui.tasks
 
+import com.basiatish.biatestapp.di.FragmentScope
+import com.basiatish.biatestapp.di.WorkManagerModule
 import dagger.Subcomponent
 
-@Subcomponent
+@FragmentScope
+@Subcomponent(modules = [WorkManagerModule::class])
 interface TasksComponent {
 
     @Subcomponent.Factory
@@ -11,5 +14,8 @@ interface TasksComponent {
     }
 
     fun inject(fragment: TasksListFragment)
+    fun inject(fragment: TaskDetailsFragment)
+    fun inject(fragment: IncidentFragment)
+    fun inject(fragment: TaskDocumentsFragment)
 
 }

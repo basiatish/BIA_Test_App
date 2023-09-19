@@ -1,6 +1,8 @@
 package com.basiatish.domain.entities
 
 data class Task(
+    val id: Int,
+    val status: String,
     val cargoType: String,
     val city: String,
     val date: String,
