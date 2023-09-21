@@ -44,4 +44,11 @@
     <string name="task_decline_details">Задание было отклонено</string>
     <string name="rules_toast">Правила загружены в downloads</string>
     <string name="documents_toast">Документы загружены</string>
+    <string name="documents_load_toast">Загрузка документов</string>
+    <string name="cancel">Отменить</string>
+    <string name="work_day">Рабочий день</string>
+    <string name="rest_day">Выходной день</string>
+    <string name="month_year">%s %s</string>
+    <string name="selected_date">%s %s %s</string>
+    <string name="timetable_days">График смен</string>
 </resources>

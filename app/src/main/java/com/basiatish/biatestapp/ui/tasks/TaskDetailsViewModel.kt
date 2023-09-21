@@ -12,6 +12,7 @@ import androidx.work.Constraints
 import androidx.work.Data
 import androidx.work.NetworkType
 import androidx.work.OneTimeWorkRequestBuilder
+import androidx.work.OutOfQuotaPolicy
 import androidx.work.WorkInfo
 import androidx.work.WorkManager
 import com.basiatish.biatestapp.R
@@ -51,7 +52,7 @@ class TaskDetailsViewModel @Inject constructor(
     private val documentsList = mutableListOf<String>()
     private val _documents = MutableLiveData<List<String>>()
     val documents: LiveData<List<String>> = _documents
-    private val filesList = mutableMapOf<String, String>()
+    val filesList = mutableMapOf<String, String>()
 
     fun getTask(taskID: Int) {
         viewModelScope.launch {
@@ -129,7 +130,9 @@ class TaskDetailsViewModel @Inject constructor(
     }
 
     fun upload(owner: LifecycleOwner, name: String, taskID: Int) {
-        val constraints = Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build()
+        val constraints = Constraints.Builder()
+            .setRequiredNetworkType(NetworkType.CONNECTED)
+            .build()
         val data = Data.Builder()
             .putString("user", name)
             .putString("taskID", taskID.toString())
@@ -138,11 +141,14 @@ class TaskDetailsViewModel @Inject constructor(
         val request = OneTimeWorkRequestBuilder<UploadWorker>()
             .setConstraints(constraints)
             .setInputData(data)
+            .setExpedited(OutOfQuotaPolicy.RUN_AS_NON_EXPEDITED_WORK_REQUEST)
             .build()
         workManager.enqueue(request)
         workManager.getWorkInfoByIdLiveData(request.id).observe(owner) {
             if (it.state == WorkInfo.State.SUCCEEDED) {
                 _status.value = "Success"
+            } else {
+                _status.value = "Error"
             }
         }
     }

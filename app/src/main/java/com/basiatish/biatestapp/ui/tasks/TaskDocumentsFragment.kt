@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.basiatish.biatestapp.App
 import com.basiatish.biatestapp.R
 import com.basiatish.biatestapp.databinding.DocumentsFragmentBinding
+import com.basiatish.biatestapp.ui.tasks.interfaces.OnDeleteButtonClickListener
 import javax.inject.Inject
 
 class TaskDocumentsFragment : Fragment(), OnDeleteButtonClickListener {
@@ -67,6 +68,7 @@ class TaskDocumentsFragment : Fragment(), OnDeleteButtonClickListener {
         binding.submitButton.setOnClickListener {
             viewModel.upload(this.viewLifecycleOwner, navArgs.contactName, navArgs.taskID)
             binding.submitButton.isEnabled = false
+            Toast.makeText(requireContext(), R.string.documents_load_toast, Toast.LENGTH_SHORT).show()
         }
         binding.addPhotoButton.setOnClickListener {
             val intent = Intent()
@@ -82,11 +84,20 @@ class TaskDocumentsFragment : Fragment(), OnDeleteButtonClickListener {
             binding.submitButton.isEnabled = it.isNotEmpty()
         }
         viewModel.status.observe(this.viewLifecycleOwner) {
-            binding.submitButton.isEnabled = true
-            Toast.makeText(requireContext(),
-                resources.getText(R.string.documents_toast), Toast.LENGTH_SHORT).show()
-            viewModel.updateTaskStatus(navArgs.taskID, "Done")
-            findNavController().navigateUp()
+            if (it == "Success") {
+                Toast.makeText(
+                    requireContext(),
+                    resources.getText(R.string.documents_toast), Toast.LENGTH_SHORT
+                ).show()
+                viewModel.updateTaskStatus(navArgs.taskID, "Done")
+                findNavController().navigateUp()
+            } else {
+                Toast.makeText(
+                    requireContext(),
+                    resources.getText(R.string.error), Toast.LENGTH_SHORT
+                ).show()
+                binding.submitButton.isEnabled = true
+            }
         }
     }
 

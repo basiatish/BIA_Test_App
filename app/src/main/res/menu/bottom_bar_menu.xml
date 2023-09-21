@@ -2,12 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/stockListFragment"
+        android:id="@+id/tasksListFragment"
         android:icon="@drawable/ic_tasks"
         android:title="@string/tasks"/>
 
     <item
-        android:id="@+id/stockSearchFragment"
+        android:id="@+id/calendarFragment"
         android:icon="@drawable/ic_timetable"
         android:title="@string/timetable" />
 

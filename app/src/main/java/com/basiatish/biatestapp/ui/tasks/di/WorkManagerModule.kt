@@ -1,4 +1,4 @@
-package com.basiatish.biatestapp.di
+package com.basiatish.biatestapp.ui.tasks.di
 
 import android.content.Context
 import androidx.work.WorkManager

@@ -57,6 +57,10 @@ class MainActivity : AppCompatActivity() {
                     binding.screenName.text = resources.getText(R.string.documents)
                     navigationBar.visibility = View.GONE
                 }
+                R.id.calendarFragment -> {
+                    binding.screenName.text = resources.getText(R.string.timetable_days)
+                    navigationBar.visibility = View.VISIBLE
+                }
             }
         }
     }

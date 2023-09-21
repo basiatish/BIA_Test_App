@@ -66,5 +66,5 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics-ktx")
     implementation("com.google.firebase:firebase-storage-ktx")
 
-    implementation("androidx.work:work-runtime-ktx:2.7.1")
+    implementation("androidx.work:work-runtime-ktx:2.8.1")
 }

@@ -54,4 +54,9 @@
             android:name="contactName"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.basiatish.biatestapp.ui.calendar.CalendarFragment"
+        android:label="CalendarFragment"
+        tools:layout="@layout/calendar_fragment"/>
 </navigation>

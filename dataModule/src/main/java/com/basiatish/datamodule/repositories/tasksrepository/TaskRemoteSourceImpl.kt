@@ -1,4 +1,4 @@
-package com.basiatish.datamodule.repositories
+package com.basiatish.datamodule.repositories.tasksrepository
 
 import com.basiatish.datamodule.api.BiaApi
 import com.basiatish.datamodule.mappers.IncidentMapper

@@ -3,13 +3,11 @@ package com.basiatish.biatestapp.ui.tasks
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.constraintlayout.widget.ConstraintSet
-import androidx.core.view.marginTop
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.basiatish.biatestapp.databinding.TaskListItemBinding
+import com.basiatish.biatestapp.ui.tasks.interfaces.OnButtonClickListener
 import com.basiatish.domain.entities.TaskList
 
 class TaskListAdapter(private val onButtonClickListener: OnButtonClickListener)

@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.basiatish.biatestapp.databinding.DocumentsItemBinding
+import com.basiatish.biatestapp.ui.tasks.interfaces.OnDeleteButtonClickListener
 
 class DocumentsListAdapter(private val onButtonClickListener: OnDeleteButtonClickListener)
     : ListAdapter<String, DocumentsListAdapter.ViewHolder>(DiffCallBack) {

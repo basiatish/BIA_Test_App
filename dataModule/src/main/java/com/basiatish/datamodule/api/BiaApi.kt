@@ -1,9 +1,10 @@
 package com.basiatish.datamodule.api
 
+import com.basiatish.datamodule.api.entities.DayEntityHeaderRemote
 import com.basiatish.datamodule.api.entities.IncidentRemote
+import com.basiatish.datamodule.api.entities.SaveDayRemote
 import com.basiatish.datamodule.api.entities.TaskRemote
 import com.basiatish.datamodule.api.entities.TaskStatusRemote
-import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -29,4 +30,10 @@ interface BiaApi {
     @PATCH("tasks/{id}.json")
     suspend fun updateTaskStatus(@Path("id") id: Int,
                                  @Body statusRemote: TaskStatusRemote): Response<TaskStatusRemote>
+
+    @GET("timetable.json")
+    suspend fun getCalendar(): Response<DayEntityHeaderRemote>
+
+    @PUT("timetable/day.json")
+    suspend fun saveDay(@Body day: SaveDayRemote): Response<SaveDayRemote>
 }

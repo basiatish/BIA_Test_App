@@ -1,14 +1,14 @@
-package com.basiatish.biatestapp.di
+package com.basiatish.biatestapp.ui.tasks.di
 
 import com.basiatish.datamodule.api.NetworkModule
 import com.basiatish.datamodule.mappers.TaskMapper
-import com.basiatish.datamodule.repositories.TaskRemoteSourceImpl
-import com.basiatish.datamodule.repositories.TaskRepositoryImpl
+import com.basiatish.datamodule.repositories.tasksrepository.TaskRemoteSourceImpl
+import com.basiatish.datamodule.repositories.tasksrepository.TaskRepositoryImpl
 import com.basiatish.biatestapp.BuildConfig
+import com.basiatish.biatestapp.di.FragmentScope
 import com.basiatish.datamodule.mappers.IncidentMapper
 import dagger.Module
 import dagger.Provides
-import javax.inject.Singleton
 
 @Module
 class TasksRepositoryModule {
@@ -21,22 +21,22 @@ class TasksRepositoryModule {
         IncidentMapper()
     }
 
-    @Singleton
+    @FragmentScope
     private val networkModule by lazy {
         NetworkModule()
     }
 
     @Volatile
-    @Singleton
+    @FragmentScope
     var tasksRepository: TaskRepositoryImpl? = null
 
-    @Singleton
+    @FragmentScope
     @Provides
     fun provideTaskRepository(): TaskRepositoryImpl {
         return tasksRepository ?: createTaskRepository()
     }
 
-    @Singleton
+    @FragmentScope
     fun createTaskRepository(): TaskRepositoryImpl {
         val repository = TaskRepositoryImpl(
             TaskRemoteSourceImpl(networkModule.createApi(BuildConfig.BASE_API), tasksMapper, incidentMapper)

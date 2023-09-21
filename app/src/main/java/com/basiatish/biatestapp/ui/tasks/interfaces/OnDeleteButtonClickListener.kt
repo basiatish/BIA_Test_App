@@ -1,4 +1,4 @@
-package com.basiatish.biatestapp.ui.tasks
+package com.basiatish.biatestapp.ui.tasks.interfaces
 
 interface OnDeleteButtonClickListener {
 

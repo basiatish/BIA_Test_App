@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.basiatish.biatestapp.App
 import com.basiatish.biatestapp.databinding.TasksListFragmentBinding
+import com.basiatish.biatestapp.ui.tasks.interfaces.OnButtonClickListener
 import javax.inject.Inject
 
 class TasksListFragment : Fragment(), OnButtonClickListener {

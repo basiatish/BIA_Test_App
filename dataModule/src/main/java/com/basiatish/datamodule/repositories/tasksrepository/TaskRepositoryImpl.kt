@@ -1,4 +1,4 @@
-package com.basiatish.datamodule.repositories
+package com.basiatish.datamodule.repositories.tasksrepository
 
 import com.basiatish.domain.common.Result
 import com.basiatish.domain.entities.Incident
