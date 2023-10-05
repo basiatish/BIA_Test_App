@@ -46,13 +46,13 @@ class UploadWorker(appContext: Context, params: WorkerParameters) : CoroutineWor
         val size = fileName?.size
         fileName?.forEach { path ->
             val uri = Uri.parse(path)
-            val fileRef = storageRef.child("users/$user/documents/$taskID/${uri.lastPathSegment}")
+            val fileRef = storageRef.child("users/companies/$user/documents/$taskID/${uri.lastPathSegment}")
             val uploadTask = fileRef.putFile(uri)
             val task = Tasks.await(uploadTask)
             count++
             setForeground(createForegroundInfo())
             if (count == size) {
-                status = "Документы загружены"
+                status = applicationContext.getString(R.string.documents_toast)
                 setForeground(createForegroundInfo())
             }
         }
@@ -66,10 +66,7 @@ class UploadWorker(appContext: Context, params: WorkerParameters) : CoroutineWor
     }
 
     private fun createForegroundInfo(): ForegroundInfo {
-        val title = "Загружены"
-        val cancel = "Cancel"
-        val intent = WorkManager.getInstance(applicationContext)
-            .createCancelPendingIntent(getId())
+        val title = applicationContext.getString(R.string.loaded)
 
         createNotificationChannel()
 
@@ -78,8 +75,6 @@ class UploadWorker(appContext: Context, params: WorkerParameters) : CoroutineWor
             .setTicker(title)
             .setContentText(status)
             .setSmallIcon(R.drawable.bia_logo)
-            .setOngoing(true)
-            .addAction(android.R.drawable.ic_delete, cancel, intent)
             .build()
 
         return ForegroundInfo(NOTIFICATION_ID, notification)
@@ -89,7 +84,7 @@ class UploadWorker(appContext: Context, params: WorkerParameters) : CoroutineWor
         createNotificationChannel()
         val builder = NotificationCompat.Builder(applicationContext, CHANNEL_ID)
             .setSmallIcon(R.drawable.bia_logo)
-            .setContentTitle("Загружены")
+            .setContentTitle(applicationContext.getString(R.string.loaded))
             .setContentText(status)
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
         return builder.build()

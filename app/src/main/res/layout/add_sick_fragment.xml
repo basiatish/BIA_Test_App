@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <include
+        android:id="@+id/calendar_view"
+        layout="@layout/calendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/choose_button"
+        style="@style/ActionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:enabled="false"
+        android:text="@string/choose"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/TaskDeclineButton"
+        android:id="@+id/clean_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/clean"
+        android:enabled="false"
+        android:layout_marginTop="12dp"/>
+
+</LinearLayout>

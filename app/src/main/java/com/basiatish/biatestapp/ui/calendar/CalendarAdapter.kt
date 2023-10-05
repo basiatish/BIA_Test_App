@@ -9,10 +9,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.basiatish.biatestapp.R
 import com.basiatish.biatestapp.databinding.CalendarCellBinding
 import com.basiatish.biatestapp.ui.calendar.interfaces.OnDayListener
-import com.basiatish.domain.entities.DayEntity
+import com.basiatish.domain.entities.CalendarDay
 
 class CalendarAdapter(
-    private val daysOfMonth: List<DayEntity>,
+    private val daysOfMonth: List<CalendarDay>,
     private val onDayListener: OnDayListener
 ) :
     RecyclerView.Adapter<CalendarAdapter.CalendarViewHolder>() {
@@ -35,13 +35,21 @@ class CalendarAdapter(
             } else if (daysOfMonth[position].isToday && !daysOfMonth[position].isWorkDay) {
                 binding.cell.background = ResourcesCompat.getDrawable(context.resources, R.drawable.today_calendar_date_container_vacation, context.theme)
             }
+            if (!daysOfMonth[position].isCurrentMonth && daysOfMonth[position].isWorkDay) {
+                binding.cell.background = ResourcesCompat.getDrawable(context.resources, R.drawable.calendar_prev_next_day_container, context.theme)
+                binding.calendarDay.setTextColor(context.resources.getColor(R.color.middle_gray_blue, context.theme))
+            } else if (!daysOfMonth[position].isCurrentMonth && (daysOfMonth[position].isWeekend || !daysOfMonth[position].isWorkDay)) {
+                binding.calendarDay.setTextColor(context.resources.getColor(R.color.middle_gray_blue, context.theme))
+            }
 
             binding.cell.setOnClickListener {
-                if (daysOfMonth[position].value != "") {
-                    onDayListener.onDayClick(position, daysOfMonth[position].value)
+                if (daysOfMonth[position].isCurrentMonth) {
+                    onDayListener.onDayClick(daysOfMonth[position], position)
                     selected?.isSelected = false
                     binding.cell.isSelected = true
                     selected = binding.cell
+                } else {
+                    onDayListener.onDayClick(daysOfMonth[position], position)
                 }
             }
         }
@@ -61,9 +69,5 @@ class CalendarAdapter(
 
     override fun getItemCount(): Int {
         return daysOfMonth.size
-    }
-
-    interface OnItemListener {
-        fun onItemClick(position: Int, dayText: String?)
     }
 }

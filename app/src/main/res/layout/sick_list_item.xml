@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/task_container">
+
+    <TextView
+        style="@style/DetailsBottomTextView"
+        android:id="@+id/range_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="29.07.2022 - 05.08.2023"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/TaskDeclineButton"
+        android:id="@+id/close_list_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/close_sick_list"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/range_text"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

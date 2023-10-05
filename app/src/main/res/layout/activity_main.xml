@@ -30,6 +30,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/add_sick_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add"
+            android:background="@drawable/add_button_container"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.fragment.app.FragmentContainerView
@@ -44,10 +55,10 @@
         app:navGraph="@navigation/nav_graph_main"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:theme="@style/BottomNavBar"
         android:id="@+id/nav_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:backgroundTint="@color/white"
         app:itemTextAppearanceInactive="@style/MenuInactiveTextStyle"
         app:itemTextAppearanceActive="@style/MenuActiveTextStyle"
         app:itemActiveIndicatorStyle="@style/BottomViewActiveIndicator"

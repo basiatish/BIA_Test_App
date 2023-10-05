@@ -51,4 +51,21 @@
     <string name="month_year">%s %s</string>
     <string name="selected_date">%s %s %s</string>
     <string name="timetable_days">График смен</string>
+    <string name="loaded">Загружены</string>
+    <string name="number_in_company">Табельный №</string>
+    <string name="phone_number">Номер телефона</string>
+    <string name="citizenship">Гражданство</string>
+    <string name="car">Машина</string>
+    <string name="car_number">Номера</string>
+    <string name="sick_list">Больничный лист</string>
+    <string name="sick_list_title">Больничный</string>
+    <string name="notice">Оповещения</string>
+    <string name="log_out">Выйти</string>
+    <string name="no_sick_lists">Нет активных больничных</string>
+    <string name="choose">Выбрать</string>
+    <string name="choose_range">Выбрать %s</string>
+    <string name="clean">Очистить</string>
+    <string name="new_sick_item">Новый больничный</string>
+    <string name="sick_list_item_range">%s - %s</string>
+    <string name="close_sick_list">Закрыть больничный</string>
 </resources>

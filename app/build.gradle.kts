@@ -65,6 +65,10 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
     implementation("com.google.firebase:firebase-analytics-ktx")
     implementation("com.google.firebase:firebase-storage-ktx")
+    implementation("com.firebaseui:firebase-ui-storage:8.0.2")
 
     implementation("androidx.work:work-runtime-ktx:2.8.1")
+
+    implementation("com.github.bumptech.glide:glide:4.13.0")
+    kapt("com.github.bumptech.glide:compiler:4.13.0")
 }

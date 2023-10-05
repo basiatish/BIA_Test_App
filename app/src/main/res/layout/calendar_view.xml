@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:id="@+id/container"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/task_details_container"
+    android:background="@drawable/default_container"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingHorizontal="16dp"
     android:orientation="vertical">

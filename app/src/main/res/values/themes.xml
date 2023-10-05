@@ -56,10 +56,7 @@
     
     <style name="BottomViewActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
         <item name="android:color">@color/light_gray_blue</item>
-    </style>
-
-    <style name="BottomNavBar" parent="">
-        <item name="android:background">@color/white</item>
+        <item name="android:itemBackground">@color/light_gray_blue</item>
     </style>
 
     <style name="MenuInactiveTextStyle" parent="TextAppearance.Material3.LabelMedium">
@@ -78,9 +75,15 @@
         <item name="android:textColor">@color/bia_gray_color</item>
         <item name="android:layout_marginTop">12dp</item>
     </style>
+
+    <style name="ProfileTypeText" parent="DetailsTypeTextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
     
     <style name="DetailsTextView" parent="Widget.AppCompat.TextView">
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">14sp</item>
         <item name="fontFamily">@font/stolzl_regular</item>
         <item name="android:textColor">@color/dark</item>
         <item name="android:layout_marginTop">4dp</item>

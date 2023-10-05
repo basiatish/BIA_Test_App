@@ -7,7 +7,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:padding="16dp">
 
@@ -67,7 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:visibility="gone"
-            android:background="@drawable/task_details_container"
+            android:background="@drawable/default_container"
             android:layout_below="@id/calendar_view">
 
             <TextView
@@ -127,7 +126,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/TaskDeclineButton"
-                android:id="@+id/decline_task_button"
+                android:id="@+id/decline_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/cancel"

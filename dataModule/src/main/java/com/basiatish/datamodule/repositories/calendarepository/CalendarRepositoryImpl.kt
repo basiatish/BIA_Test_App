@@ -1,13 +1,13 @@
 package com.basiatish.datamodule.repositories.calendarepository
 
 import com.basiatish.domain.common.Result
-import com.basiatish.domain.entities.DayEntity
+import com.basiatish.domain.entities.CalendarDay
 import com.basiatish.domain.repositories.CalendarRepository
 import java.time.LocalDate
 
 class CalendarRepositoryImpl(private val remoteSource: CalendarRemoteSource) : CalendarRepository {
 
-    override suspend fun getCalendar(date: LocalDate): Result<List<DayEntity>> {
+    override suspend fun getCalendar(date: LocalDate): Result<List<CalendarDay>> {
         return remoteSource.getCalendar(date)
     }
 

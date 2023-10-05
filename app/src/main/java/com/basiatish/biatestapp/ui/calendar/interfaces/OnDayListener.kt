@@ -1,7 +1,9 @@
 package com.basiatish.biatestapp.ui.calendar.interfaces
 
+import com.basiatish.domain.entities.CalendarDay
+
 interface OnDayListener {
 
-    fun onDayClick(position: Int, text: String)
+    fun onDayClick(day: CalendarDay, position: Int)
 
 }

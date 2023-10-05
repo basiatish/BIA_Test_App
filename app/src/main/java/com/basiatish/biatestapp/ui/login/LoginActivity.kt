@@ -1,7 +1,11 @@
 package com.basiatish.biatestapp.ui.login
 
+import android.Manifest
+import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.core.splashscreen.SplashScreen
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavController
@@ -26,6 +30,17 @@ class LoginActivity : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.main_fragment_container) as NavHostFragment
 
         navController = navHostFragment.navController
+        checkPermission()
+    }
+
+    private fun checkPermission() {
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE)
+            != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
+                1)
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {

@@ -1,8 +1,8 @@
 package com.basiatish.datamodule.mappers
 
-import com.basiatish.datamodule.api.entities.DayEntityRemote
 import com.basiatish.datamodule.api.entities.SaveDayRemote
-import com.basiatish.domain.entities.DayEntity
+import com.basiatish.domain.entities.CalendarDay
+import com.basiatish.domain.entities.SickDay
 
 class CalendarMapper {
 
@@ -10,8 +10,7 @@ class CalendarMapper {
         return SaveDayRemote(time, isWorkDay)
     }
 
-    fun toDayEntity(value: String): DayEntity {
-        return DayEntity(value)
+    fun toCalendarDay(value: String): CalendarDay {
+        return CalendarDay(value)
     }
-
 }

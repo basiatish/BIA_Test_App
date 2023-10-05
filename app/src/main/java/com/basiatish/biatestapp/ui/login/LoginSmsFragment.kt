@@ -63,7 +63,6 @@ class LoginSmsFragment : Fragment() {
 
     private fun setupListeners() {
         binding.confirmButton.setOnClickListener {
-            println("kek")
             val intent = Intent(requireActivity(), MainActivity::class.java)
             startActivity(intent)
             requireActivity().finish()
@@ -71,8 +70,9 @@ class LoginSmsFragment : Fragment() {
         binding.input.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_NEXT) {
                 if (binding.confirmButton.isEnabled) {
-                    println("kek")
-
+                    val intent = Intent(requireActivity(), MainActivity::class.java)
+                    startActivity(intent)
+                    requireActivity().finish()
                 }
                 return@setOnEditorActionListener true
             }
@@ -89,12 +89,7 @@ class LoginSmsFragment : Fragment() {
 
     private fun phoneTextSetUp() {
         val phone = navArgs.phone
-//        val screenWidth = requireContext().resources.configuration
-//        if (binding.titleHelper.text.length + phone.length > screenWidth) {
-//            binding.titleHelper.append("\n$phone")
-//        } else {
-            binding.titleHelper.append(phone)
-        //}
+        binding.titleHelper.append(phone)
     }
 
     private fun timerTextSetUp() {

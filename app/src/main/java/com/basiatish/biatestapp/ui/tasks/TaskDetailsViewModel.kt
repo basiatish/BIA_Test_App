@@ -72,9 +72,11 @@ class TaskDetailsViewModel @Inject constructor(
         viewModelScope.launch {
             when (val upload = uploadTaskIncidentUseCase.invoke(taskID, text)) {
                 is Result.Success -> {
+                    _status.value = "Success"
                     Log.i("Upload", upload.resultData.text)
                 }
                 is Result.Error -> {
+                    _status.value = "Error"
                     Log.e("Upload", upload.exception.message.toString())
                 }
             }

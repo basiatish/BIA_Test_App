@@ -3,6 +3,7 @@ package com.basiatish.biatestapp.di
 import android.content.Context
 import com.basiatish.biatestapp.ui.calendar.di.CalendarComponent
 import com.basiatish.biatestapp.ui.login.di.LoginComponent
+import com.basiatish.biatestapp.ui.profile.di.ProfileComponent
 import com.basiatish.biatestapp.ui.tasks.di.TasksComponent
 import dagger.BindsInstance
 import dagger.Component
@@ -20,5 +21,7 @@ interface AppComponent {
     fun loginComponent(): LoginComponent.Factory
     fun tasksComponent(): TasksComponent.Factory
     fun calendarComponent(): CalendarComponent.Factory
+
+    fun profileComponent(): ProfileComponent.Factory
 
 }

@@ -27,7 +27,7 @@ class DownLoadWorker(appContext: Context, params: WorkerParameters) : CoroutineW
         val fileName = inputData.getString("fileName")
         val user = inputData.getString("user")
         val taskID = inputData.getString("taskID")
-        val licenceRef = storageRef.child("users/$user/licences/$taskID")
+        val licenceRef = storageRef.child("users/companies/$user/licences/$taskID")
         val fileRef = licenceRef.child(fileName!!)
         withContext(Dispatchers.IO) {
             download(fileRef)

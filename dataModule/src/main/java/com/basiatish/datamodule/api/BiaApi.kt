@@ -2,7 +2,10 @@ package com.basiatish.datamodule.api
 
 import com.basiatish.datamodule.api.entities.DayEntityHeaderRemote
 import com.basiatish.datamodule.api.entities.IncidentRemote
+import com.basiatish.datamodule.api.entities.ProfileRemote
 import com.basiatish.datamodule.api.entities.SaveDayRemote
+import com.basiatish.datamodule.api.entities.SickListStatus
+import com.basiatish.datamodule.api.entities.SickRemote
 import com.basiatish.datamodule.api.entities.TaskRemote
 import com.basiatish.datamodule.api.entities.TaskStatusRemote
 import retrofit2.Response
@@ -14,26 +17,41 @@ import retrofit2.http.Path
 
 interface BiaApi {
 
-    @GET("tasks.json")
+    @GET("user/tasks.json")
     suspend fun getTaskList(): Response<List<TaskRemote>>
 
-    @GET("tasks/{id}.json")
+    @GET("user/tasks/{id}.json")
     suspend fun getTask(@Path("id") id: Int): Response<TaskRemote>
 
-    @PUT("incidents/{taskID}.json")
+    @PUT("user/incidents/{taskID}.json")
     suspend fun uploadTaskIncident(@Path("taskID") taskID: Int,
                                    @Body incidentRemote: IncidentRemote): Response<IncidentRemote>
 
-    @GET("incidents/{taskID}.json")
+    @GET("user/incidents/{taskID}.json")
     suspend fun getTaskIncident(@Path("taskID") taskID: Int): Response<IncidentRemote>
 
-    @PATCH("tasks/{id}.json")
+    @PATCH("user/tasks/{id}.json")
     suspend fun updateTaskStatus(@Path("id") id: Int,
                                  @Body statusRemote: TaskStatusRemote): Response<TaskStatusRemote>
 
-    @GET("timetable.json")
+    @GET("user/timetable.json")
     suspend fun getCalendar(): Response<DayEntityHeaderRemote>
 
-    @PUT("timetable/day.json")
-    suspend fun saveDay(@Body day: SaveDayRemote): Response<SaveDayRemote>
+    @PUT("user/timetable/days/{time}.json")
+    suspend fun saveDay(@Path("time") time: String,
+        @Body day: SaveDayRemote): Response<SaveDayRemote>
+
+    @GET("user/profile.json")
+    suspend fun getProfile(): Response<ProfileRemote>
+
+    @PUT("user/sicklist/{range}.json")
+    suspend fun saveRange(@Path("range") range: String,
+                          @Body item: SickRemote) : Response<SickRemote>
+
+    @GET("user/sicklist.json")
+    suspend fun getSickList(): Response<Map<String, SickRemote>?>
+
+    @PATCH("user/sicklist/{range}.json")
+    suspend fun closeSickList(@Path("range") range: String,
+                                 @Body status: SickListStatus): Response<SickListStatus>
 }

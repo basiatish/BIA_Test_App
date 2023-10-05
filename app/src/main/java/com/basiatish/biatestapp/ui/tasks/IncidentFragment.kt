@@ -45,6 +45,7 @@ class IncidentFragment : Fragment() {
         val incidentText: String? = navArgs.incidentText
         if (incidentText != null) bind(incidentText)
         setupListeners()
+        setupObservers()
     }
 
     private fun setupListeners() {
@@ -57,8 +58,18 @@ class IncidentFragment : Fragment() {
             }
         }
         binding.saveButton.setOnClickListener {
+            it.isEnabled = false
             viewModel.saveIncident(navArgs.taskID, incident)
-            NavigationUI.navigateUp(findNavController(), null)
+        }
+    }
+
+    private fun setupObservers() {
+        viewModel.status.observe(this.viewLifecycleOwner) {
+            if (it == "Success") {
+                findNavController().navigateUp()
+            } else {
+                binding.saveButton.isEnabled = true
+            }
         }
     }
 

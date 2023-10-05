@@ -91,12 +91,6 @@ class TaskDocumentsFragment : Fragment(), OnDeleteButtonClickListener {
                 ).show()
                 viewModel.updateTaskStatus(navArgs.taskID, "Done")
                 findNavController().navigateUp()
-            } else {
-                Toast.makeText(
-                    requireContext(),
-                    resources.getText(R.string.error), Toast.LENGTH_SHORT
-                ).show()
-                binding.submitButton.isEnabled = true
             }
         }
     }

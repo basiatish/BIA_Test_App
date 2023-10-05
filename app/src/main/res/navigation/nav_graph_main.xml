@@ -59,4 +59,32 @@
         android:name="com.basiatish.biatestapp.ui.calendar.CalendarFragment"
         android:label="CalendarFragment"
         tools:layout="@layout/calendar_fragment"/>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.basiatish.biatestapp.ui.profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/profile_fragment">
+        <action
+            android:id="@+id/action_profileFragment_to_sickListFragment"
+            app:destination="@id/sickListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.basiatish.biatestapp.ui.chat.ChatFragment"
+        android:label="ChatFragment"
+        tools:layout="@layout/chat_fragment"/>
+    <fragment
+        android:id="@+id/sickListFragment"
+        android:name="com.basiatish.biatestapp.ui.profile.SickListFragment"
+        android:label="SickListFragment"
+        tools:layout="@layout/sick_list_fragment">
+        <action
+            android:id="@+id/action_sickListFragment_to_addSickFragment"
+            app:destination="@id/addSickFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addSickFragment"
+        android:name="com.basiatish.biatestapp.ui.profile.AddSickFragment"
+        android:label="AddSickFragment"
+        tools:layout="@layout/add_sick_fragment"/>
 </navigation>
