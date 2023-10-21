@@ -11,7 +11,7 @@
 This test application was developed for it-company to apply for a vacancy. It was created from figma view thats why where aren't any notifications, animations and so on. Looks well only in Light Mode.
 To start this app quckly, I provide some test data, you can upload "test_data.json" into your FireBase Realtime database. 
 To download or upload files, you have to create FireBase Storage with special hierarchy. For uploading files create: "/users/companies/[company owner from task]/documents/[task id]". 
-Path paraments you can get from test_data.json file. For donwloading files hierarchy looks quite the same:<br/>
+Path paraments you can get from test_data.json file. For downloading files hierarchy looks quite the same:<br/>
 1. for licence "/users/companies/[company owner from task]/licences/[task id]" and don't forget to put here a file with name "test.pdf".<br/>
 2. for user logo create "/users/employees/user/photo" and don't forget to put here a file with name "test.jpg".<br/>
 </p>
