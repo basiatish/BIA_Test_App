@@ -41,6 +41,7 @@ Path paraments you can get from test_data.json file. For downloading files hiera
   * [Kotlin](https://kotlinlang.org/)
   * [Coroutines](https://github.com/Kotlin/kotlinx.coroutines)
   * [FireBase](https://firebase.google.com/)
+  * [Dagger 2](https://dagger.dev/dev-guide/)
   * [Android Jetpack](https://developer.android.com/jetpack)
     * [LiveData](https://developer.android.com/topic/libraries/architecture/livedata)
     * [Lifecycle](https://developer.android.com/topic/libraries/architecture/lifecycle)
