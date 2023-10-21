@@ -60,13 +60,13 @@ class TaskDetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupObservers()
-        checkPermission()
     }
 
     private fun setupObservers() {
         viewModel.task.observe(this.viewLifecycleOwner) {
             if (it != null) {
                 bind(it)
+                binding.downloadButton.isEnabled = true
                 setupTextViewActions()
                 setupListeners()
                 setupFooterObservers()
@@ -143,14 +143,6 @@ class TaskDetailsFragment : Fragment() {
             val intent = Intent(Intent.ACTION_DIAL)
             intent.data = Uri.fromParts("tel", phone.toString(), null)
             startActivity(intent)
-        }
-    }
-
-    private fun checkPermission() {
-        if (ContextCompat.checkSelfPermission(requireActivity().application,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE)
-            == PackageManager.PERMISSION_GRANTED) {
-            binding.downloadButton.isEnabled = true
         }
     }
 
