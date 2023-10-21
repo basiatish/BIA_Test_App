@@ -18,19 +18,19 @@ Path paraments you can get from test_data.json file. For donwloading files hiera
 </br>
 
 <p align="center">
-<img src="readme_assets/Screenshot_1.jpg" width="200">
-<img src="readme_assets/Screenshot_2.jpg" width="200">
-<img src="readme_assets/Screenshot_3.jpg" width="200">
-<img src="readme_assets/Screenshot_4.jpg" width="200">
-<img src="readme_assets/Screenshot_5.jpg" width="200">
-<img src="readme_assets/Screenshot_6.jpg" width="200">
-<img src="readme_assets/Screenshot_7.jpg" width="200">
-<img src="readme_assets/Screenshot_8.jpg" width="200">
-<img src="readme_assets/Screenshot_9.jpg" width="200">
-<img src="readme_assets/Screenshot_10.jpg" width="200">
-<img src="readme_assets/Screenshot_11.jpg" width="200">
-<img src="readme_assets/Screenshot_12.jpg" width="200">
-<img src="readme_assets/Screenshot_13.jpg" width="200">
+<img src="readme_assets/Screenshot_1.png" width="200">
+<img src="readme_assets/Screenshot_2.png" width="200">
+<img src="readme_assets/Screenshot_3.png" width="200">
+<img src="readme_assets/Screenshot_4.png" width="200">
+<img src="readme_assets/Screenshot_5.png" width="200">
+<img src="readme_assets/Screenshot_6.png" width="200">
+<img src="readme_assets/Screenshot_7.png" width="200">
+<img src="readme_assets/Screenshot_8.png" width="200">
+<img src="readme_assets/Screenshot_9.png" width="200">
+<img src="readme_assets/Screenshot_10.png" width="200">
+<img src="readme_assets/Screenshot_11.png" width="200">
+<img src="readme_assets/Screenshot_12.png" width="200">
+<img src="readme_assets/Screenshot_13.png" width="200">
 </p>
   
 ### Architecture
@@ -52,5 +52,4 @@ Path paraments you can get from test_data.json file. For donwloading files hiera
   * [Retrofit 2](https://square.github.io/retrofit/)
   * [GSON](https://github.com/google/gson)
   * [Material-Components](https://github.com/material-components/material-components-android)
-  * [LightWeightCharts](https://tradingview.github.io/lightweight-charts/)
   * [Glide](https://bumptech.github.io/glide/)
