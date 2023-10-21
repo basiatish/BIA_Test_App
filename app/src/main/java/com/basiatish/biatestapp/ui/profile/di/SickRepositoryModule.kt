@@ -2,11 +2,11 @@ package com.basiatish.biatestapp.ui.profile.di
 
 import com.basiatish.biatestapp.BuildConfig
 import com.basiatish.biatestapp.di.FragmentScope
-import com.basiatish.datamodule.api.NetworkModule
-import com.basiatish.datamodule.mappers.SickMapper
-import com.basiatish.datamodule.repositories.sicklistrepository.SickCalendarLocalSourceImpl
-import com.basiatish.datamodule.repositories.sicklistrepository.SickListRemoteSourceImpl
-import com.basiatish.datamodule.repositories.sicklistrepository.SickRepositoryImpl
+import com.basiatish.data.api.NetworkModule
+import com.basiatish.data.mappers.SickMapper
+import com.basiatish.data.repositories.sicklistrepository.SickCalendarLocalSourceImpl
+import com.basiatish.data.repositories.sicklistrepository.SickListRemoteSourceImpl
+import com.basiatish.data.repositories.sicklistrepository.SickRepositoryImpl
 import dagger.Module
 import dagger.Provides
 

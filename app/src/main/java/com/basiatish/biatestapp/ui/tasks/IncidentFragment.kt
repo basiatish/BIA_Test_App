@@ -8,10 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import androidx.navigation.ui.NavigationUI
 import com.basiatish.biatestapp.App
 import com.basiatish.biatestapp.databinding.IncidentFragmentBinding
-import com.basiatish.domain.entities.Incident
 import javax.inject.Inject
 
 class IncidentFragment : Fragment() {

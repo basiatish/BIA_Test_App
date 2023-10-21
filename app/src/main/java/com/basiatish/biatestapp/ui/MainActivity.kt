@@ -66,11 +66,6 @@ class MainActivity : AppCompatActivity() {
                     navigationBar.visibility = View.VISIBLE
                     binding.addSickList.visibility = View.GONE
                 }
-                R.id.chatFragment -> {
-                    binding.screenName.text = resources.getText(R.string.chat)
-                    navigationBar.visibility = View.VISIBLE
-                    binding.addSickList.visibility = View.GONE
-                }
                 R.id.sickListFragment -> {
                     binding.screenName.text = resources.getText(R.string.sick_list_title)
                     navigationBar.visibility = View.GONE

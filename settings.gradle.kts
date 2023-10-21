@@ -16,4 +16,4 @@ dependencyResolutionManagement {
 rootProject.name = "BIA test app"
 include(":app")
 include(":domain")
-include(":dataModule")
+include(":data")

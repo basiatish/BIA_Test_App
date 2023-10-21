@@ -1,6 +1,6 @@
 package com.basiatish.biatestapp.ui.profile.di
 
-import com.basiatish.datamodule.repositories.profilerepository.ProfileRepositoryImpl
+import com.basiatish.data.repositories.profilerepository.ProfileRepositoryImpl
 import com.basiatish.domain.usecases.LoadProfileUseCase
 import dagger.Module
 import dagger.Provides

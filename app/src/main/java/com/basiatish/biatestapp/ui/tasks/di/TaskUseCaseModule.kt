@@ -1,6 +1,6 @@
 package com.basiatish.biatestapp.ui.tasks.di
 
-import com.basiatish.datamodule.repositories.tasksrepository.TaskRepositoryImpl
+import com.basiatish.data.repositories.tasksrepository.TaskRepositoryImpl
 import com.basiatish.domain.usecases.GetRemoteTasksUseCase
 import com.basiatish.domain.usecases.GetTaskIncidentUseCase
 import com.basiatish.domain.usecases.GetTaskUseCase

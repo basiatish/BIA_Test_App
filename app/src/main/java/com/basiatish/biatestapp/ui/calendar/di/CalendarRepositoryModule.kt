@@ -2,10 +2,10 @@ package com.basiatish.biatestapp.ui.calendar.di
 
 import com.basiatish.biatestapp.BuildConfig
 import com.basiatish.biatestapp.di.FragmentScope
-import com.basiatish.datamodule.api.NetworkModule
-import com.basiatish.datamodule.mappers.CalendarMapper
-import com.basiatish.datamodule.repositories.calendarepository.CalendarRemoteSourceImpl
-import com.basiatish.datamodule.repositories.calendarepository.CalendarRepositoryImpl
+import com.basiatish.data.api.NetworkModule
+import com.basiatish.data.mappers.CalendarMapper
+import com.basiatish.data.repositories.calendarepository.CalendarRemoteSourceImpl
+import com.basiatish.data.repositories.calendarepository.CalendarRepositoryImpl
 import dagger.Module
 import dagger.Provides
 

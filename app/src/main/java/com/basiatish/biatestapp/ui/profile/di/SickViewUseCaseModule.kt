@@ -1,6 +1,6 @@
 package com.basiatish.biatestapp.ui.profile.di
 
-import com.basiatish.datamodule.repositories.sicklistrepository.SickRepositoryImpl
+import com.basiatish.data.repositories.sicklistrepository.SickRepositoryImpl
 import com.basiatish.domain.usecases.CloseSickListUseCase
 import com.basiatish.domain.usecases.GetSickCalendarUseCase
 import com.basiatish.domain.usecases.GetSickListUseCase

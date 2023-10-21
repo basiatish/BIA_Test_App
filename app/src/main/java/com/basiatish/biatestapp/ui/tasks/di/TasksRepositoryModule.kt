@@ -1,12 +1,12 @@
 package com.basiatish.biatestapp.ui.tasks.di
 
-import com.basiatish.datamodule.api.NetworkModule
-import com.basiatish.datamodule.mappers.TaskMapper
-import com.basiatish.datamodule.repositories.tasksrepository.TaskRemoteSourceImpl
-import com.basiatish.datamodule.repositories.tasksrepository.TaskRepositoryImpl
+import com.basiatish.data.api.NetworkModule
+import com.basiatish.data.mappers.TaskMapper
+import com.basiatish.data.repositories.tasksrepository.TaskRemoteSourceImpl
+import com.basiatish.data.repositories.tasksrepository.TaskRepositoryImpl
 import com.basiatish.biatestapp.BuildConfig
 import com.basiatish.biatestapp.di.FragmentScope
-import com.basiatish.datamodule.mappers.IncidentMapper
+import com.basiatish.data.mappers.IncidentMapper
 import dagger.Module
 import dagger.Provides
 

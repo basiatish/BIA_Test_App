@@ -69,11 +69,6 @@
             app:destination="@id/sickListFragment" />
     </fragment>
     <fragment
-        android:id="@+id/chatFragment"
-        android:name="com.basiatish.biatestapp.ui.chat.ChatFragment"
-        android:label="ChatFragment"
-        tools:layout="@layout/chat_fragment"/>
-    <fragment
         android:id="@+id/sickListFragment"
         android:name="com.basiatish.biatestapp.ui.profile.SickListFragment"
         android:label="SickListFragment"

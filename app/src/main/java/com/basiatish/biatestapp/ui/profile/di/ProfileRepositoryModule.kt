@@ -2,10 +2,10 @@ package com.basiatish.biatestapp.ui.profile.di
 
 import com.basiatish.biatestapp.BuildConfig
 import com.basiatish.biatestapp.di.FragmentScope
-import com.basiatish.datamodule.api.NetworkModule
-import com.basiatish.datamodule.mappers.ProfileMapper
-import com.basiatish.datamodule.repositories.profilerepository.ProfileRemoteSourceImpl
-import com.basiatish.datamodule.repositories.profilerepository.ProfileRepositoryImpl
+import com.basiatish.data.api.NetworkModule
+import com.basiatish.data.mappers.ProfileMapper
+import com.basiatish.data.repositories.profilerepository.ProfileRemoteSourceImpl
+import com.basiatish.data.repositories.profilerepository.ProfileRepositoryImpl
 import dagger.Module
 import dagger.Provides
 

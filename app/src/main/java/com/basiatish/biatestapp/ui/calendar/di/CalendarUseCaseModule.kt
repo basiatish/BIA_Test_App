@@ -1,6 +1,6 @@
 package com.basiatish.biatestapp.ui.calendar.di
 
-import com.basiatish.datamodule.repositories.calendarepository.CalendarRepositoryImpl
+import com.basiatish.data.repositories.calendarepository.CalendarRepositoryImpl
 import com.basiatish.domain.usecases.GetCalendarUseCase
 import com.basiatish.domain.usecases.SaveDayUseCase
 import dagger.Module
