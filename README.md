@@ -16,22 +16,6 @@ Path paraments you can get from test_data.json file. For downloading files hiera
 2. for user logo create "/users/employees/user/photo" and don't forget to put here a file with name "test.jpg".<br/>
 </p>
 </br>
-
-<p align="center">
-<img src="readme_assets/Screenshot_1.png" width="200">
-<img src="readme_assets/Screenshot_2.png" width="200">
-<img src="readme_assets/Screenshot_3.png" width="200">
-<img src="readme_assets/Screenshot_4.png" width="200">
-<img src="readme_assets/Screenshot_5.png" width="200">
-<img src="readme_assets/Screenshot_6.png" width="200">
-<img src="readme_assets/Screenshot_7.png" width="200">
-<img src="readme_assets/Screenshot_8.png" width="200">
-<img src="readme_assets/Screenshot_9.png" width="200">
-<img src="readme_assets/Screenshot_10.png" width="200">
-<img src="readme_assets/Screenshot_11.png" width="200">
-<img src="readme_assets/Screenshot_12.png" width="200">
-<img src="readme_assets/Screenshot_13.png" width="200">
-</p>
   
 ### Architecture
   * Clean Architecture
@@ -54,3 +38,19 @@ Path paraments you can get from test_data.json file. For downloading files hiera
   * [GSON](https://github.com/google/gson)
   * [Material-Components](https://github.com/material-components/material-components-android)
   * [Glide](https://bumptech.github.io/glide/)
+
+<p align="center">
+<img src="readme_assets/Screenshot_1.png" width="200">
+<img src="readme_assets/Screenshot_2.png" width="200">
+<img src="readme_assets/Screenshot_3.png" width="200">
+<img src="readme_assets/Screenshot_4.png" width="200">
+<img src="readme_assets/Screenshot_5.png" width="200">
+<img src="readme_assets/Screenshot_6.png" width="200">
+<img src="readme_assets/Screenshot_7.png" width="200">
+<img src="readme_assets/Screenshot_8.png" width="200">
+<img src="readme_assets/Screenshot_9.png" width="200">
+<img src="readme_assets/Screenshot_10.png" width="200">
+<img src="readme_assets/Screenshot_11.png" width="200">
+<img src="readme_assets/Screenshot_12.png" width="200">
+<img src="readme_assets/Screenshot_13.png" width="200">
+</p>
