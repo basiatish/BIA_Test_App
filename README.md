@@ -39,6 +39,7 @@ Path paraments you can get from test_data.json file. For downloading files hiera
   * [Material-Components](https://github.com/material-components/material-components-android)
   * [Glide](https://bumptech.github.io/glide/)
 
+### Screenshots
 <p align="center">
 <img src="readme_assets/Screenshot_1.png" width="200">
 <img src="readme_assets/Screenshot_2.png" width="200">
